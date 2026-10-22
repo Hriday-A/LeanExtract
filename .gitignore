@@ -1,0 +1,36 @@
+# Secrets: keys live in .env locally and in Kaggle/Colab Secrets, never in git
+.env
+.env.*
+!.env.example
+
+# Raw real-world receipts (Phase 7) contain PII; only redacted copies are ever committed
+data/raw/
+data/real_receipts_raw/
+*.heic
+*.HEIC
+
+# Large artifacts: datasets, OCR caches, checkpoints and adapters go to HF Hub, not git
+data/cache/
+checkpoints/
+outputs/
+*.safetensors
+*.bin
+*.pt
+*.gguf
+
+# Experiment tracking local state
+wandb/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
